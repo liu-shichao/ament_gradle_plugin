@@ -1,3 +1,13 @@
+### TODO. 
+
+1. when this plugin called in submodule, the src/jni/xxxx still in the root dir.
+
+and the gradle.properties file in the root dir and app dir both.
+
+
+
+### build 
+
 ```
 ./gradlew publishHelloPublicationToMavenRepository 
 ```
