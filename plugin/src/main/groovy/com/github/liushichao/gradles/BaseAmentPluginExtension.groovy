@@ -39,21 +39,8 @@ class BaseAmentPluginExtension {
     this.workingDir = project.getProjectDir().toString()
     this.properties = new Properties()
     this.sourceSpace = project.findProperty('ament.source_space')
-
-
-
-    println("====================workingDir======================================")
-    println(workingDir)
-//    println(project.projectDir)
-//    println(project.relativeProjectPath())
-
-    println("==========================================================")
     if (this.sourceSpace != null) {
       this.propertiesFile = project.file([this.sourceSpace,project.rootDir.relativePath(project.getProjectDir()), 'gradle.properties'].join(File.separator))
-
-      println("============================sourceSpace==============================")
-      println(propertiesFile.toString())
-      println("==========================================================")
     } else {
       this.propertiesFile = project.file([this.workingDir, 'gradle.properties'].join(File.separator))
     }
