@@ -1,0 +1,70 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.liushichao.gradles",
+    "module": "plugin",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.7.1",
+      "buildId": "cqbax4w3j5a3vkmnktoc2nkp5i"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "ament-0.0.1.jar",
+          "url": "ament-0.0.1.jar",
+          "size": 74884,
+          "sha512": "b44afac5fb6924207143ad44675c2c5b4dc5127ec1c727dbc33dd06b7bee80cab25944f98d7fe6749136c3a501a9d9999fca526f2bb0b0398ed76287a1b07611",
+          "sha256": "d02da0092db2c281e6fcc92ad196d193b35b98f4b7ca6cde68dbe53230c17bd2",
+          "sha1": "d512c8c2cb41e4f9b044cc14116f174b968e9f3e",
+          "md5": "74f7e6473b83248223a73921fc41e3d9"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "3.6.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ament-0.0.1.jar",
+          "url": "ament-0.0.1.jar",
+          "size": 74884,
+          "sha512": "b44afac5fb6924207143ad44675c2c5b4dc5127ec1c727dbc33dd06b7bee80cab25944f98d7fe6749136c3a501a9d9999fca526f2bb0b0398ed76287a1b07611",
+          "sha256": "d02da0092db2c281e6fcc92ad196d193b35b98f4b7ca6cde68dbe53230c17bd2",
+          "sha1": "d512c8c2cb41e4f9b044cc14116f174b968e9f3e",
+          "md5": "74f7e6473b83248223a73921fc41e3d9"
+        }
+      ]
+    }
+  ]
+}
