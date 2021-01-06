@@ -35,7 +35,7 @@ class AndroidAmentPluginExtension extends BaseAmentPluginExtension {
     this.androidABI = project.findProperty('ament.android_abi')
     this.androidNDK = project.findProperty('ament.android_ndk')
     this.androidVariant = project.findProperty('ament.android_variant')
-    this.stlDestination = [this.workingDir, 'src', 'main', 'jniLibs', this.androidABI
+    this.stlDestination = [this.workingDir, 'src', 'main', 'ros2', this.androidABI
       ].join(File.separator)
   }
 
@@ -161,6 +161,7 @@ class AndroidAmentPluginExtension extends BaseAmentPluginExtension {
         }
 
       project.copy {
+        println(this.stlDestination)
         project.ament.dependencies.split(':').each {
           def fp = [project.file(it).parentFile.parentFile, 'lib'
               ].join(File.separator)

@@ -15,7 +15,7 @@
 
 package com.github.liushichao.gradles
 
-import org.gradle.api.Plugin
+// import org.gradle.api.Plugin
 import org.gradle.api.Project
 
 class BaseAmentPluginExtension {
@@ -36,13 +36,26 @@ class BaseAmentPluginExtension {
 
   BaseAmentPluginExtension(Project project) {
     this.project = project
-    this.workingDir = System.getProperty('user.dir')
+    this.workingDir = project.getProjectDir().toString()
     this.properties = new Properties()
     this.sourceSpace = project.findProperty('ament.source_space')
+
+
+
+    println("====================workingDir======================================")
+    println(workingDir)
+//    println(project.projectDir)
+//    println(project.relativeProjectPath())
+
+    println("==========================================================")
     if (this.sourceSpace != null) {
-      this.propertiesFile = project.file([this.sourceSpace, 'gradle.properties'].join(File.separator))
+      this.propertiesFile = project.file([this.sourceSpace,project.rootDir.relativePath(project.getProjectDir()), 'gradle.properties'].join(File.separator))
+
+      println("============================sourceSpace==============================")
+      println(propertiesFile.toString())
+      println("==========================================================")
     } else {
-      this.propertiesFile = project.file('gradle.properties')
+      this.propertiesFile = project.file([this.workingDir, 'gradle.properties'].join(File.separator))
     }
     if (this.propertiesFile.exists()) {
       this.properties.load(this.propertiesFile.newDataInputStream())

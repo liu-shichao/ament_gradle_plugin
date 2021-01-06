@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ament_gradle_plugin.iml" filepath="$PROJECT_DIR$/ament_gradle_plugin.iml" group="ament_gradle_plugin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plugin/plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/plugin/plugin.iml" group="ament_gradle_plugin/plugin" />
+    </modules>
+  </component>
+</project>
